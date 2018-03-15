@@ -69,6 +69,7 @@ export default {
       } else {
         this.current = page
       }
+      this.$emit('on-change', this.current)
     },
     changeOverStyle (page, index) {
       if (page === 'pre') {

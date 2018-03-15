@@ -4,7 +4,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <!-- <Rating :grade="2" :maxStars="5" :hasCounter="true"/>-->
     <!-- <HelloWorld></HelloWorld> -->
-    <Page></Page>
+    <Page :total="total" :page_size="pageSize" @on-change="changeSm"></Page>
   </div>
 </template>
 
@@ -18,12 +18,19 @@ export default {
   components: { Rating, HelloWorld, Page },
   data () {
     return {
+      total: 1000,
+      pageSize: 8,
       grade: 2
     }
   },
   watch: {
     grade: function (val, oldVal) {
       console.log('new: %s, old: %s', val, oldVal)
+    }
+  },
+  methods: {
+    changeSm (page) {
+      console.log('page', page)
     }
   }
 }
