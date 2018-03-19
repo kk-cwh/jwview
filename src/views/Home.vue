@@ -5,7 +5,7 @@
     <!-- <Rating :grade="2" :maxStars="5" :hasCounter="true"/>-->
     <!-- <HelloWorld></HelloWorld> -->
     <!-- <Page :total="total" :page_size="pageSize" @on-change="changeSm"></Page> -->
-      <Progress :number="total" ></Progress>
+      <!-- <Progress :number="total" ></Progress> -->
   </div>
 </template>
 
