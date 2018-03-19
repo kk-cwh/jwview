@@ -4,7 +4,8 @@
     <!-- <img src="./assets/logo.png"> -->
     <!-- <Rating :grade="2" :maxStars="5" :hasCounter="true"/>-->
     <!-- <HelloWorld></HelloWorld> -->
-    <Page :total="total" :page_size="pageSize" @on-change="changeSm"></Page>
+    <!-- <Page :total="total" :page_size="pageSize" @on-change="changeSm"></Page> -->
+      <Progress :number="total" ></Progress>
   </div>
 </template>
 
@@ -12,13 +13,14 @@
 import Rating from '@/components/Rating'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Page from '@/components/Page.vue'
+import Progress from '@/components/Progress.vue'
 
 export default {
   name: 'Home',
-  components: { Rating, HelloWorld, Page },
+  components: { Rating, HelloWorld, Page, Progress },
   data () {
     return {
-      total: 1000,
+      total: 80,
       pageSize: 8,
       grade: 2
     }
